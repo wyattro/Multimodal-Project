@@ -11,6 +11,20 @@ body > nav > ul > li {
     background-color: blue;
 }
 
+/* drop-down menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* layout */
 ul {
     padding: 0;
@@ -30,6 +44,28 @@ header {
     margin-left:auto;
     margin-right:auto;
     text-align: center;
+}
+.block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.block .text {
+    flex: 1;
+    text-align: left;
+}
+.block .image img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.block:nth-child(even) {
+    flex-direction: row-reverse;
 }
 body p {
     margin-top: 10%;
